@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="minecraft," />
+  <meta name="keywords" content="C#," />
 
 
 
@@ -57,19 +57,26 @@
 
 
 
-<meta name="description" content="前两天，由于使用了github搭建了我的blog，之前买的阿里云服务器（云翼计划，学生党10块一个月）就闲置了，自己感觉好浪费，闲来无事发现同学都喜欢玩我的世界，就自己动手搭建了一台我的世界服务器，24小时开机，满足我的同学们一起联机的愿望。搭建我的世界服务器非常简单，只需要简单的几个步骤。
-我买的服务器是阿里云ecs，配置为最低的，20gb硬盘，系统为Ubuntu14.04.先用putty连上服">
+<meta name="description" content="前段时间实验室的一位学长说实验室缺少写上位机的同学，正好自己不参加比赛，于是自己查找各种视频和资料，学习了如何用C#写串口助手，现在将大致思路写出来，同时也将为我的代码添加注释，并上传到github上，欢迎大家指正错误。
+学过单片机的都知道，单片机与计算机通信最常使用的就是串口，51系列的单片机串口通信很简单，那么上位机如何接收单片机的信息呢？其实很简单，用下面一张图就可以轻松表示过程：
+
+简单来">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用阿里云搭建Minecraft服务器">
-<meta property="og:url" content="http://yoursite.com/2016/03/07/minecraftserver-md/index.html">
+<meta property="og:title" content="一步一步写串口--综述">
+<meta property="og:url" content="http://yoursite.com/2016/03/27/comm/index.html">
 <meta property="og:site_name" content="Tom Riddle">
-<meta property="og:description" content="前两天，由于使用了github搭建了我的blog，之前买的阿里云服务器（云翼计划，学生党10块一个月）就闲置了，自己感觉好浪费，闲来无事发现同学都喜欢玩我的世界，就自己动手搭建了一台我的世界服务器，24小时开机，满足我的同学们一起联机的愿望。搭建我的世界服务器非常简单，只需要简单的几个步骤。
-我买的服务器是阿里云ecs，配置为最低的，20gb硬盘，系统为Ubuntu14.04.先用putty连上服">
-<meta property="og:updated_time" content="2016-03-13T05:15:13.847Z">
+<meta property="og:description" content="前段时间实验室的一位学长说实验室缺少写上位机的同学，正好自己不参加比赛，于是自己查找各种视频和资料，学习了如何用C#写串口助手，现在将大致思路写出来，同时也将为我的代码添加注释，并上传到github上，欢迎大家指正错误。
+学过单片机的都知道，单片机与计算机通信最常使用的就是串口，51系列的单片机串口通信很简单，那么上位机如何接收单片机的信息呢？其实很简单，用下面一张图就可以轻松表示过程：
+
+简单来">
+<meta property="og:image" content="http://7xr8np.com1.z0.glb.clouddn.com/port.png">
+<meta property="og:updated_time" content="2016-03-27T11:49:45.431Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用阿里云搭建Minecraft服务器">
-<meta name="twitter:description" content="前两天，由于使用了github搭建了我的blog，之前买的阿里云服务器（云翼计划，学生党10块一个月）就闲置了，自己感觉好浪费，闲来无事发现同学都喜欢玩我的世界，就自己动手搭建了一台我的世界服务器，24小时开机，满足我的同学们一起联机的愿望。搭建我的世界服务器非常简单，只需要简单的几个步骤。
-我买的服务器是阿里云ecs，配置为最低的，20gb硬盘，系统为Ubuntu14.04.先用putty连上服">
+<meta name="twitter:title" content="一步一步写串口--综述">
+<meta name="twitter:description" content="前段时间实验室的一位学长说实验室缺少写上位机的同学，正好自己不参加比赛，于是自己查找各种视频和资料，学习了如何用C#写串口助手，现在将大致思路写出来，同时也将为我的代码添加注释，并上传到github上，欢迎大家指正错误。
+学过单片机的都知道，单片机与计算机通信最常使用的就是串口，51系列的单片机串口通信很简单，那么上位机如何接收单片机的信息呢？其实很简单，用下面一张图就可以轻松表示过程：
+
+简单来">
 
 
 
@@ -87,7 +94,7 @@
   };
 </script>
 
-  <title> 使用阿里云搭建Minecraft服务器 | Tom Riddle </title>
+  <title> 一步一步写串口--综述 | Tom Riddle </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -227,7 +234,7 @@
             
             
               
-                使用阿里云搭建Minecraft服务器
+                一步一步写串口--综述
               
             
           </h1>
@@ -239,8 +246,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-07T17:18:34+08:00" content="2016-03-07">
-              2016-03-07
+            <time itemprop="dateCreated" datetime="2016-03-27T19:30:10+08:00" content="2016-03-27">
+              2016-03-27
             </time>
           </span>
 
@@ -253,8 +260,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/服务器/" itemprop="url" rel="index">
-                    <span itemprop="name">服务器</span>
+                  <a href="/categories/上位机/" itemprop="url" rel="index">
+                    <span itemprop="name">上位机</span>
                   </a>
                 </span>
 
@@ -269,8 +276,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/03/07/minecraftserver-md/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/07/minecraftserver-md/" itemprop="commentsCount"></span>
+                <a href="/2016/03/27/comm/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/27/comm/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -291,21 +298,11 @@
       
 
       
-        <p>前两天，由于使用了github搭建了我的blog，之前买的阿里云服务器（云翼计划，学生党10块一个月）就闲置了，自己感觉好浪费，闲来无事发现同学都喜欢玩我的世界，就自己动手搭建了一台我的世界服务器，24小时开机，满足我的同学们一起联机的愿望。<br>搭建我的世界服务器非常简单，只需要简单的几个步骤。</p>
-<p>我买的服务器是阿里云ecs，配置为最低的，20gb硬盘，系统为Ubuntu14.04.<br>先用putty连上服务器后，安装java和screen，screen是用来防止关闭putty后服务器脚本被挂起。</p>
-<p><code>sudo apt-get update</code><br><code>sudo apt-get install openjdk-6-jre-headless</code><br><code>sudo apt-get screen</code></p>
-<p>然后检查java安装是否成功。</p>
-<p><code>java -v</code></p>
-<p>（也可以去java官网下载rpm包然后上传至服务器进行安装）</p>
-<p>安装完java后，我们要去下载cauldron（原来叫MCPC）<br><a href="http://www.mcbbs.net/thread-282081-1-1.html" target="_blank" rel="external">MCBBS的地址</a><br>选择一个版本，并下载对应的librarys，解压librarys，将里边的三个文件和cauldron一起上传到服务器，然后新建个shell脚本，起名为“start.sh”，里边写入这一句：</p>
-<p><code>java -Xincgc -Xms256m -Xmx750m -Xss1M -server -jar cauldron-1.7.10-*.jar</code></p>
-<p>保存，更改权限</p>
-<p><code>chmod a+x start.sh</code></p>
-<p>运行脚本，第一次可能会安装失败，需要打开eula.txt，将其中的false改为true。</p>
-<p>再次运行脚本，看见“done”，的字样就表示安装成功，输入stop停止服务。<br>vi打开server.properties，找到<code>online-mode=true</code>,改为false，保存。</p>
-<p><code>screen -S mc</code></p>
-<p>在新的终端里边运行start.sh脚本，至此，一个可以24小时运行的我的世界服务器就搭建完成了。</p>
-<p>注意：服务器端与本地端需保持一致，forge也必须存在，如果安装mods的话把mods文件上传到mods文件夹，注意有些可以单机玩耍的mods不能安装到服务器上。<br><a href="http://www.mcbbs.net/thread-103119-1-1.html" target="_blank" rel="external">其他服务器安装的教程请看这里</a></p>
+        <p>前段时间实验室的一位学长说实验室缺少写上位机的同学，正好自己不参加比赛，于是自己查找各种视频和资料，学习了如何用C#写串口助手，现在将大致思路写出来，同时也将为我的代码添加注释，并上传到github上，欢迎大家指正错误。</p>
+<p>学过单片机的都知道，单片机与计算机通信最常使用的就是串口，51系列的单片机串口通信很简单，那么上位机如何接收单片机的信息呢？其实很简单，用下面一张图就可以轻松表示过程：</p>
+<p><img src="http://7xr8np.com1.z0.glb.clouddn.com/port.png" alt="上位机串口通信"></p>
+<p>简单来说，上位机通信过程与文件IO的过程是相同的，打开串口，写入接收，关闭串口。其实过程和代码都很简单，因为C#的.net framework已经为我们集成好了API，只要调用相关的API，就能实现完整功能的串口助手。</p>
+<p>不仅仅是C#，Qt库也帮我们集成好了相关的功能，同样也只需要调用相关的API函数，就可以实现其功能，当然，一个是微软的C#，一个是C++，两者大家可以根据自己的喜好来选择，这里用C#来写。</p>
 
       
     </div>
@@ -314,7 +311,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/minecraft/" rel="tag">#minecraft</a>
+            <a href="/tags/C/" rel="tag">#C#</a>
           
         </div>
       
@@ -323,17 +320,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/02/25/github-hexo/" rel="next" title="使用GitHub+hexo搭建博客">
-                <i class="fa fa-chevron-left"></i> 使用GitHub+hexo搭建博客
+              <a href="/2016/03/13/alphago/" rel="next" title="我们该担心AlphaGo吗？">
+                <i class="fa fa-chevron-left"></i> 我们该担心AlphaGo吗？
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/03/13/alphago/" rel="prev" title="我们该担心AlphaGo吗？">
-                我们该担心AlphaGo吗？ <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -359,8 +352,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/03/07/minecraftserver-md/"
-           data-title="使用阿里云搭建Minecraft服务器" data-url="http://yoursite.com/2016/03/07/minecraftserver-md/">
+      <div class="ds-thread" data-thread-key="2016/03/27/comm/"
+           data-title="一步一步写串口--综述" data-url="http://yoursite.com/2016/03/27/comm/">
       </div>
     
   </div>
