@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="hexo," />
+  <meta name="keywords" content="win10," />
 
 
 
@@ -57,26 +57,20 @@
 
 
 
-<meta name="description" content="本博客采用github+hexo+七牛图床建立，刚搭建的时候查了很多资料，走了不少弯路。现在我写下这篇教程，希望帮助大家搭建属于自己的blog。
-安装环境：linux发行版为opensuse42.1
-1.安装node.js hexo git去node.js官网下载node.js,我选择的版本是5.6。下载后，解压文件到主目录，然后终端中使用ln命令设置全局ln -s /home/node-v5.6">
+<meta name="description" content="前段时间手贱，更新了win10评估版Build14316，体验了传说中的linux on win10。虽然说体验上并无卡顿，死机等问题，但是细节上却不如真正的linux。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用GitHub+hexo搭建博客">
-<meta property="og:url" content="http://yoursite.com/2016/02/25/github-hexo/index.html">
+<meta property="og:title" content="linux on win10 上手体验">
+<meta property="og:url" content="http://yoursite.com/2016/04/17/bash-on-win/index.html">
 <meta property="og:site_name" content="Tom Riddle">
-<meta property="og:description" content="本博客采用github+hexo+七牛图床建立，刚搭建的时候查了很多资料，走了不少弯路。现在我写下这篇教程，希望帮助大家搭建属于自己的blog。
-安装环境：linux发行版为opensuse42.1
-1.安装node.js hexo git去node.js官网下载node.js,我选择的版本是5.6。下载后，解压文件到主目录，然后终端中使用ln命令设置全局ln -s /home/node-v5.6">
-<meta property="og:image" content="http://7xr8np.com1.z0.glb.clouddn.com/githubhexo1.png">
-<meta property="og:image" content="http://7xr8np.com1.z0.glb.clouddn.com/githubhexo2.png">
-<meta property="og:image" content="http://7xr8np.com1.z0.glb.clouddn.com/githubhexo3.png">
-<meta property="og:image" content="http://7xr8np.com1.z0.glb.clouddn.com/githubhexo4.png">
-<meta property="og:updated_time" content="2016-03-13T05:15:13.171Z">
+<meta property="og:description" content="前段时间手贱，更新了win10评估版Build14316，体验了传说中的linux on win10。虽然说体验上并无卡顿，死机等问题，但是细节上却不如真正的linux。">
+<meta property="og:image" content="http://7xr8np.com1.z0.glb.clouddn.com/bash3.png">
+<meta property="og:image" content="http://7xr8np.com1.z0.glb.clouddn.com/bash4.png">
+<meta property="og:image" content="http://7xr8np.com1.z0.glb.clouddn.com/bash1.png">
+<meta property="og:image" content="http://7xr8np.com1.z0.glb.clouddn.com/bash2.png">
+<meta property="og:updated_time" content="2016-04-17T15:56:22.519Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用GitHub+hexo搭建博客">
-<meta name="twitter:description" content="本博客采用github+hexo+七牛图床建立，刚搭建的时候查了很多资料，走了不少弯路。现在我写下这篇教程，希望帮助大家搭建属于自己的blog。
-安装环境：linux发行版为opensuse42.1
-1.安装node.js hexo git去node.js官网下载node.js,我选择的版本是5.6。下载后，解压文件到主目录，然后终端中使用ln命令设置全局ln -s /home/node-v5.6">
+<meta name="twitter:title" content="linux on win10 上手体验">
+<meta name="twitter:description" content="前段时间手贱，更新了win10评估版Build14316，体验了传说中的linux on win10。虽然说体验上并无卡顿，死机等问题，但是细节上却不如真正的linux。">
 
 
 
@@ -94,7 +88,7 @@
   };
 </script>
 
-  <title> 使用GitHub+hexo搭建博客 | Tom Riddle </title>
+  <title> linux on win10 上手体验 | Tom Riddle </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -234,7 +228,7 @@
             
             
               
-                使用GitHub+hexo搭建博客
+                linux on win10 上手体验
               
             
           </h1>
@@ -246,8 +240,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-02-25T18:08:06+08:00" content="2016-02-25">
-              2016-02-25
+            <time itemprop="dateCreated" datetime="2016-04-17T23:27:50+08:00" content="2016-04-17">
+              2016-04-17
             </time>
           </span>
 
@@ -260,8 +254,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/blog/" itemprop="url" rel="index">
-                    <span itemprop="name">blog</span>
+                  <a href="/categories/linux/" itemprop="url" rel="index">
+                    <span itemprop="name">linux</span>
                   </a>
                 </span>
 
@@ -276,8 +270,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/02/25/github-hexo/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/25/github-hexo/" itemprop="commentsCount"></span>
+                <a href="/2016/04/17/bash-on-win/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/17/bash-on-win/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -298,35 +292,18 @@
       
 
       
-        <p>本博客采用github+hexo+七牛图床建立，刚搭建的时候查了很多资料，走了不少弯路。现在我写下这篇教程，希望帮助大家搭建属于自己的blog。</p>
-<h4 id="安装环境："><a href="#安装环境：" class="headerlink" title="安装环境："></a>安装环境：</h4><p>linux<br>发行版为opensuse42.1</p>
-<h2 id="1-安装node-js-hexo-git"><a href="#1-安装node-js-hexo-git" class="headerlink" title="1.安装node.js hexo git"></a>1.安装node.js hexo git</h2><p>去<a href="https://nodejs.org/en/" target="_blank" rel="external">node.js官网</a>下载node.js,我选择的版本是5.6。<br>下载后，解压文件到主目录，然后终端中使用ln命令设置全局<br><code>ln -s /home/node-v5.6.0-linux-x64/bin/node /usr/local/bin/node</code><br><code>ln -s /home/node-v5.6.0-linux-x64/bin/npm /usr/local/bin/npm</code><br>至此，node.js安装完毕。（详细教程参考<a href="http://my.oschina.net/blogshi/blog/260953" target="_blank" rel="external">顽Shi的Blog</a>）</p>
-<p>接下来安装hexo，终端里输入：<br><code>npm install hexo-cli -g</code><br>等待一小会，hexo就安装完毕了。<br>再安装一个插件叫hexo-deployer-git,用于推送博客<br><code>npm install hexo-deployer-git --save</code></p>
-<p>接下来安装git，终端输入<br><code>sudo zypper install git</code><br>然后<br><code>git -v</code><br>查看是否安装成功。（请根据自己的发行版安装）</p>
-<h2 id="2-配置hexo"><a href="#2-配置hexo" class="headerlink" title="2.配置hexo"></a>2.配置hexo</h2><p>安装完上述环境后，我们先在本地搭建博客。<br>首先 cd到node.js的bin文件夹下，输入<br><code>hexo init blog</code><br>这一步会初始化hexo，并生成blog目录。<br>cd到blog目录下，输入<br><code>npm install</code><br>然后目录中会出现 _config.yml文件,这个是站点配置文件，打开它。<br># site下边的是blog题头，将language字段改为<code>language: zh-Hans</code>设置博客为中文。<br># Directory是对应文件目录（无特殊需求不用改）。<br># Extensions下边是主题。<br># Deployment下是推送设置，这个等到下边推送的时候再说。<br>在下边添加几行（可选）</p>
-<pre><code>since: 2016
-avatar: /images/avatar.jpg
-social:  
-  github: (url)
-</code></pre><p>since是博客创建日期，会显示在底部，avatar是头像，socal是社交链接。</p>
-<p>写完之后，终端中输入<br><code>hexo g</code><br><code>hexo server</code><br>生成静态目录并且本地测试<br>在浏览器中输入地址 0.0.0.0:4000就可以看到效果了。<br> <img src="http://7xr8np.com1.z0.glb.clouddn.com/githubhexo1.png" alt="效果图"></p>
-<h2 id="2-安装主题"><a href="#2-安装主题" class="headerlink" title="2.安装主题"></a>2.安装主题</h2><p>如果你觉得hexo默认的主题不好看，网络上有很多可供你选择，这里我选择的NexT，其源代码在github上。<br><a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">NexT主题</a><br>更多主题看这个：<br><a href="http://www.zhihu.com/question/24422335" target="_blank" rel="external">知乎 hexo主题推荐</a><br>具体安装在其页面有详细的介绍，这里不再阐述。</p>
-<h2 id="3-写文章"><a href="#3-写文章" class="headerlink" title="3.写文章"></a>3.写文章</h2><p>如果你要新建一篇文章，在命令行输入：<br><code>hexo n xxx</code><br>然后用编辑器打开，文件在blog/source/_posts文件夹下，xxx.md,语法使用的是markdown，写法很简洁，具体可以参考这篇文章<a href="http://www.jianshu.com/p/1e402922ee32/" target="_blank" rel="external">Markdown——入门指南 by Te_Lee</a></p>
-<p>每次写完，都要生成静态文件：<br><code>hexo g</code></p>
-<h2 id="4-github配置"><a href="#4-github配置" class="headerlink" title="4.github配置"></a>4.github配置</h2><p>去github建立一个帐号,验证邮箱（不验证无法创建），然后创建新项目<br><img src="http://7xr8np.com1.z0.glb.clouddn.com/githubhexo2.png" alt="创建新项目"><br>项目名为xxx.github.io,其中xxx为你的github ID。<br><img src="http://7xr8np.com1.z0.glb.clouddn.com/githubhexo3.png" alt=""><br>先设定git<br>在终端中输入<br><code>git config --global user.name &quot;xxx&quot;</code> xxx为你的id<br><code>git config --global user.email xxxx</code> xxxx为你的邮箱</p>
-<p>然后我们创建ssh-rsa<br>在终端中输入<br><code>ssh-keygen -t rsa</code><br>连续三次次按enter，全部选择默认。<br>创建后，会在.ssh目录下生成两个文件id_rsa.pub和id_rsa，注意，.ssh目录默认隐藏。<br>用编辑器打开id_rsa.pub,里边是ssh密钥。</p>
-<p>在github上打开项目，选择setting，在右边选择Delopy keys，选择Add delopy key,出现这个界面。<br><img src="http://7xr8np.com1.z0.glb.clouddn.com/githubhexo4.png" alt=""><br>在key里边把id_rsa.pub的密钥全部拷贝过来，title可以不写。</p>
-<p><strong>注意:</strong> 下边的Allow write access一定要选上，这个将允许修改文件，我刚开始被这个坑了好久TAT。</p>
-<p>点击ADD key完成添加，github端设置完成。</p>
-<p>####为什么不选择gitcafe？<br>本人比较懒，gitcafe上边添加delopy key只能是只读的，不能读写。</p>
-<p>然后打开站点配置文件<br>在# Deployment下边修改推送设置</p>
-<pre><code>deploy:
-  type: git
-  repo: git@github.com:xxx/xxx.github.com.git
-</code></pre><p>xxx是你的github ID，默认推送分支为master<br>修改完后保存，然后终端中生成静态文件。<br><code>hexo g</code><br>推送。<br><code>hexo d</code><br>或者使用简便写法<br><code>hexo g -d</code><br>等待推送完成，在浏览器中访问xxx.github.io即可访问，国外的网站，有点慢。</p>
-<p>markdown语法插入图片需要外链，这里推荐<a href="http://www.qiniu.com/" target="_blank" rel="external">七牛</a>，注册帐号后有1G空间，验正身份后10G。</p>
-<p>大功告成，enjoy your blog！</p>
-<p>其他的一些参考文章网站：<br><a href="http://www.jianshu.com/p/13725d818565" target="_blank" rel="external">使用七牛云存储作博客图床 by Andrew_liu</a><br><a href="http://www.cnblogs.com/sunada2005/archive/2013/06/06/3121098.html" target="_blank" rel="external">git使用 by sunada</a><br>win下搭建与linux下差不多，可以看看这篇<a href="http://zipperary.com/2013/05/28/hexo-guide-2/" target="_blank" rel="external">hexo系列教程：（二）搭建hexo博客 by zypper</a><br><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">hexo中文文档</a></p>
+        <p>前段时间手贱，更新了win10评估版Build14316，体验了传说中的linux on win10。<br>虽然说体验上并无卡顿，死机等问题，但是细节上却不如真正的linux。</p>
+<p><img src="http://7xr8np.com1.z0.glb.clouddn.com/bash3.png" alt=""><br><a id="more"></a><br>安装很简单，在设置-更新和安全-高级选项-点击 获取会员版本 下方的 开始。</p>
+<p>开始获取后，会先让你注册为会员。注册后会让你以会员身份登录，点击“确定”后，会注销后自动登录。登录后，系统会自动获取会员版本。</p>
+<p>等待四五日，就会推送更新，重启之后，按win+x-程序与功能-启用或关闭windows功能-windows subsystem for linux(beta)打勾-重启-命令行输入bash-等待下载完成即可体验。<br><img src="http://7xr8np.com1.z0.glb.clouddn.com/bash4.png" alt="安装linux on win10"></p>
+<p>linux发行版本号是Ubuntu 14.04。<br><img src="http://7xr8np.com1.z0.glb.clouddn.com/bash1.png" alt=""></p>
+<p>总的来说，确实是个Ubuntu，apt-get可以使用，甚至还有python2.7,win下的盘符以文件夹形式挂载到/mnt里，如果以管理员运行cmd，再启动bash，就是root身份，否则就是普通用户。</p>
+<p>当然令人吐槽的地方也是数不胜数。</p>
+<p>首先是，命令关机和重启不好使。</p>
+<p><img src="http://7xr8np.com1.z0.glb.clouddn.com/bash2.png" alt=""></p>
+<p>(当然也可以理解，毕竟子系统。)</p>
+<p>再者，TM cmd太丑了，定制性太差了！完全没有ubuntu命令行好看(主要是字体)。</p>
+<p>最后，大家谨慎升级，这版本bug偏多。（升级完我LOL都玩不了了）</p>
 
       
     </div>
@@ -335,7 +312,7 @@ social:
       
         <div class="post-tags">
           
-            <a href="/tags/hexo/" rel="tag">#hexo</a>
+            <a href="/tags/win10/" rel="tag">#win10</a>
           
         </div>
       
@@ -344,13 +321,13 @@ social:
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/04/11/comm2/" rel="next" title="一步一步写串口--串口设置">
+                <i class="fa fa-chevron-left"></i> 一步一步写串口--串口设置
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/03/07/minecraftserver-md/" rel="prev" title="使用阿里云搭建Minecraft服务器">
-                使用阿里云搭建Minecraft服务器 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -376,8 +353,8 @@ social:
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/02/25/github-hexo/"
-           data-title="使用GitHub+hexo搭建博客" data-url="http://yoursite.com/2016/02/25/github-hexo/">
+      <div class="ds-thread" data-thread-key="2016/04/17/bash-on-win/"
+           data-title="linux on win10 上手体验" data-url="http://yoursite.com/2016/04/17/bash-on-win/">
       </div>
     
   </div>
@@ -482,7 +459,7 @@ social:
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装环境："><span class="nav-number">1.</span> <span class="nav-text">安装环境：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-安装node-js-hexo-git"><span class="nav-number"></span> <span class="nav-text">1.安装node.js hexo git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-配置hexo"><span class="nav-number"></span> <span class="nav-text">2.配置hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-安装主题"><span class="nav-number"></span> <span class="nav-text">2.安装主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-写文章"><span class="nav-number"></span> <span class="nav-text">3.写文章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-github配置"><span class="nav-number"></span> <span class="nav-text">4.github配置</span></a></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
