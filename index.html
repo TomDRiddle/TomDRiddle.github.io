@@ -209,15 +209,122 @@
 
     
     
+
+    
       
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/04/26/comm3/" itemprop="url">
+                  一步一步写串口--发送接收
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-04-26T18:21:47+08:00" content="2016-04-26">
+              2016-04-26
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/上位机/" itemprop="url" rel="index">
+                    <span itemprop="name">上位机</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/04/26/comm3/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/26/comm3/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
       
-        
-        
-        
       
 
       
-    
+        
+          
+          上次我们讲到如何设置串口，这次我们讲讲如何发送与接收数据。在串口中，上位机接收发送数据是从缓存区中进行的。下位机发送数据，通过串口接收到数据缓存区，然后上位机再从缓存区读取数据;上位机发送数据到缓存区，串口再从缓存区读数据发送到下位机，这个缓存区一般在内存中。
+为了使发送和接收同步进行，我们使用串口
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/04/26/comm3/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
 
     
       
@@ -422,7 +529,7 @@
       
         
           
-          上周事情比较多，托更了一周。上周我们讲到，串口其实和写文件一样，但是多了一个串口设置的过程，今天我们就讲讲C#中如何设置串口。学过单片机的人都知道，要想串口通信，需要设置波特率，奇偶校验，停止位等等，而上位机也一样。不仅如此，PC端USB口很多，还要设置串口号，缓存区等等。好麻烦，幸好C#已经为我们
+          上周事情比较多，脱更了一周。上周我们讲到，串口其实和写文件一样，但是多了一个串口设置的过程，今天我们就讲讲C#中如何设置串口。学过单片机的人都知道，要想串口通信，需要设置波特率，奇偶校验，停止位等等，而上位机也一样。不仅如此，PC端USB口很多，还要设置串口号，缓存区等等。好麻烦，幸好C#已经为我们
           ...
 
           <div class="post-more-link text-center">
@@ -676,122 +783,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/03/07/minecraftserver-md/" itemprop="url">
-                  使用阿里云搭建Minecraft服务器
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-07T17:18:34+08:00" content="2016-03-07">
-              2016-03-07
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/服务器/" itemprop="url" rel="index">
-                    <span itemprop="name">服务器</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/03/07/minecraftserver-md/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/07/minecraftserver-md/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          前两天，由于使用了github搭建了我的blog，之前买的阿里云服务器（云翼计划，学生党10块一个月）就闲置了，自己感觉好浪费，闲来无事发现同学都喜欢玩我的世界，就自己动手搭建了一台我的世界服务器，24小时开机，满足我的同学们一起联机的愿望。搭建我的世界服务器非常简单，只需要简单的几个步骤。
-我买的
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/03/07/minecraftserver-md/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
 
   </section>
 
@@ -838,7 +829,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-count">7</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

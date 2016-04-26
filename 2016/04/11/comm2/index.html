@@ -57,18 +57,18 @@
 
 
 
-<meta name="description" content="上周事情比较多，托更了一周。上周我们讲到，串口其实和写文件一样，但是多了一个串口设置的过程，今天我们就讲讲C#中如何设置串口。学过单片机的人都知道，要想串口通信，需要设置波特率，奇偶校验，停止位等等，而上位机也一样。不仅如此，PC端USB口很多，还要设置串口号，缓存区等等。好麻烦，幸好C#已经为我们集成好了，只需要简单的赋值就可以代码如下：
+<meta name="description" content="上周事情比较多，脱更了一周。上周我们讲到，串口其实和写文件一样，但是多了一个串口设置的过程，今天我们就讲讲C#中如何设置串口。学过单片机的人都知道，要想串口通信，需要设置波特率，奇偶校验，停止位等等，而上位机也一样。不仅如此，PC端USB口很多，还要设置串口号，缓存区等等。好麻烦，幸好C#已经为我们集成好了，只需要简单的赋值就可以代码如下：
 1PortBaudrate = Convert.ToIn">
 <meta property="og:type" content="article">
 <meta property="og:title" content="一步一步写串口--串口设置">
 <meta property="og:url" content="http://yoursite.com/2016/04/11/comm2/index.html">
 <meta property="og:site_name" content="Tom Riddle">
-<meta property="og:description" content="上周事情比较多，托更了一周。上周我们讲到，串口其实和写文件一样，但是多了一个串口设置的过程，今天我们就讲讲C#中如何设置串口。学过单片机的人都知道，要想串口通信，需要设置波特率，奇偶校验，停止位等等，而上位机也一样。不仅如此，PC端USB口很多，还要设置串口号，缓存区等等。好麻烦，幸好C#已经为我们集成好了，只需要简单的赋值就可以代码如下：
+<meta property="og:description" content="上周事情比较多，脱更了一周。上周我们讲到，串口其实和写文件一样，但是多了一个串口设置的过程，今天我们就讲讲C#中如何设置串口。学过单片机的人都知道，要想串口通信，需要设置波特率，奇偶校验，停止位等等，而上位机也一样。不仅如此，PC端USB口很多，还要设置串口号，缓存区等等。好麻烦，幸好C#已经为我们集成好了，只需要简单的赋值就可以代码如下：
 1PortBaudrate = Convert.ToIn">
-<meta property="og:updated_time" content="2016-04-11T14:36:00.431Z">
+<meta property="og:updated_time" content="2016-04-26T10:26:27.587Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一步一步写串口--串口设置">
-<meta name="twitter:description" content="上周事情比较多，托更了一周。上周我们讲到，串口其实和写文件一样，但是多了一个串口设置的过程，今天我们就讲讲C#中如何设置串口。学过单片机的人都知道，要想串口通信，需要设置波特率，奇偶校验，停止位等等，而上位机也一样。不仅如此，PC端USB口很多，还要设置串口号，缓存区等等。好麻烦，幸好C#已经为我们集成好了，只需要简单的赋值就可以代码如下：
+<meta name="twitter:description" content="上周事情比较多，脱更了一周。上周我们讲到，串口其实和写文件一样，但是多了一个串口设置的过程，今天我们就讲讲C#中如何设置串口。学过单片机的人都知道，要想串口通信，需要设置波特率，奇偶校验，停止位等等，而上位机也一样。不仅如此，PC端USB口很多，还要设置串口号，缓存区等等。好麻烦，幸好C#已经为我们集成好了，只需要简单的赋值就可以代码如下：
 1PortBaudrate = Convert.ToIn">
 
 
@@ -291,7 +291,7 @@
       
 
       
-        <p>上周事情比较多，托更了一周。<br>上周我们讲到，串口其实和写文件一样，但是多了一个串口设置的过程，今天我们就讲讲C#中如何设置串口。<br>学过单片机的人都知道，要想串口通信，需要设置波特率，奇偶校验，停止位等等，而上位机也一样。不仅如此，PC端USB口很多，还要设置串口号，缓存区等等。<br>好麻烦，幸好C#已经为我们集成好了，只需要简单的赋值就可以代码如下：</p>
+        <p>上周事情比较多，脱更了一周。<br>上周我们讲到，串口其实和写文件一样，但是多了一个串口设置的过程，今天我们就讲讲C#中如何设置串口。<br>学过单片机的人都知道，要想串口通信，需要设置波特率，奇偶校验，停止位等等，而上位机也一样。不仅如此，PC端USB口很多，还要设置串口号，缓存区等等。<br>好麻烦，幸好C#已经为我们集成好了，只需要简单的赋值就可以代码如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PortBaudrate = Convert.ToInt32(BaudrateChoose.Text);&#10;PortDataBits = Convert.ToInt32(DataBitChoose.Text);&#10;PortParity = (Parity)Enum.Parse(typeof(Parity), CheckBitChoose.Text);&#10;PortStopBits = (StopBits)Enum.Parse(typeof(StopBits), StopBitChoose.Text);&#10;try&#10;&#123;&#10;    serialPort1.PortName = COMChoose.Text;&#10;    serialPort1.BaudRate = PortBaudrate;&#10;    serialPort1.DataBits = PortDataBits;&#10;    serialPort1.Parity = PortParity;&#10;    serialPort1.StopBits = PortStopBits;&#10;&#125;&#10;catch&#10;&#123;&#10;    ...&#10;&#125;</span><br></pre></td></tr></table></figure>
 <p><strong>注意，奇偶校验和停止位在C#中是枚举类，不能由text直接转换，需要用枚举类的Parse方法强制转换。</strong></p>
 <p>因为设置可能不安全，所以用try/catch来验证。<br>设置成功后，就可以用串口的Open方法打开了，注意，打开串口也是不安全的，请使用try/catch。<br>至于缓存区的设置，可以参照官方文档，一般来讲不用设置缓存区大小，默认即可。</p>
@@ -394,7 +394,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-count">7</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

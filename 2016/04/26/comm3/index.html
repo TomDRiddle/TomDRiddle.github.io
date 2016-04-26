@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="人工智能," />
+  <meta name="keywords" content="C#," />
 
 
 
@@ -57,17 +57,19 @@
 
 
 
-<meta name="description" content="“人机大战”，李世石0：3完败给“阿尔法狗”，哀叹声四起，满世界新闻标题都是“人工智能统治人类”一类的话。说实话，我们该担心人工智能吗？我们当然不用担心，或者说，很长很长的一段时间，我们都不用担心。">
+<meta name="description" content="上次我们讲到如何设置串口，这次我们讲讲如何发送与接收数据。在串口中，上位机接收发送数据是从缓存区中进行的。下位机发送数据，通过串口接收到数据缓存区，然后上位机再从缓存区读取数据;上位机发送数据到缓存区，串口再从缓存区读数据发送到下位机，这个缓存区一般在内存中。
+为了使发送和接收同步进行，我们使用串口类的委托事件来写：1private void Form1_Load(object sender, E">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我们该担心AlphaGo吗？">
-<meta property="og:url" content="http://yoursite.com/2016/03/13/alphago/index.html">
+<meta property="og:title" content="一步一步写串口--发送接收">
+<meta property="og:url" content="http://yoursite.com/2016/04/26/comm3/index.html">
 <meta property="og:site_name" content="Tom Riddle">
-<meta property="og:description" content="“人机大战”，李世石0：3完败给“阿尔法狗”，哀叹声四起，满世界新闻标题都是“人工智能统治人类”一类的话。说实话，我们该担心人工智能吗？我们当然不用担心，或者说，很长很长的一段时间，我们都不用担心。">
-<meta property="og:image" content="http://www.zmgov.com/d/file/sports/zh/2016-03-09/19dca1395297fc315255871571384687.jpg">
-<meta property="og:updated_time" content="2016-03-13T05:17:14.571Z">
+<meta property="og:description" content="上次我们讲到如何设置串口，这次我们讲讲如何发送与接收数据。在串口中，上位机接收发送数据是从缓存区中进行的。下位机发送数据，通过串口接收到数据缓存区，然后上位机再从缓存区读取数据;上位机发送数据到缓存区，串口再从缓存区读数据发送到下位机，这个缓存区一般在内存中。
+为了使发送和接收同步进行，我们使用串口类的委托事件来写：1private void Form1_Load(object sender, E">
+<meta property="og:updated_time" content="2016-04-26T12:00:49.123Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我们该担心AlphaGo吗？">
-<meta name="twitter:description" content="“人机大战”，李世石0：3完败给“阿尔法狗”，哀叹声四起，满世界新闻标题都是“人工智能统治人类”一类的话。说实话，我们该担心人工智能吗？我们当然不用担心，或者说，很长很长的一段时间，我们都不用担心。">
+<meta name="twitter:title" content="一步一步写串口--发送接收">
+<meta name="twitter:description" content="上次我们讲到如何设置串口，这次我们讲讲如何发送与接收数据。在串口中，上位机接收发送数据是从缓存区中进行的。下位机发送数据，通过串口接收到数据缓存区，然后上位机再从缓存区读取数据;上位机发送数据到缓存区，串口再从缓存区读数据发送到下位机，这个缓存区一般在内存中。
+为了使发送和接收同步进行，我们使用串口类的委托事件来写：1private void Form1_Load(object sender, E">
 
 
 
@@ -85,7 +87,7 @@
   };
 </script>
 
-  <title> 我们该担心AlphaGo吗？ | Tom Riddle </title>
+  <title> 一步一步写串口--发送接收 | Tom Riddle </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -225,7 +227,7 @@
             
             
               
-                我们该担心AlphaGo吗？
+                一步一步写串口--发送接收
               
             
           </h1>
@@ -237,8 +239,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-13T11:39:50+08:00" content="2016-03-13">
-              2016-03-13
+            <time itemprop="dateCreated" datetime="2016-04-26T18:21:47+08:00" content="2016-04-26">
+              2016-04-26
             </time>
           </span>
 
@@ -251,8 +253,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/随笔/" itemprop="url" rel="index">
-                    <span itemprop="name">随笔</span>
+                  <a href="/categories/上位机/" itemprop="url" rel="index">
+                    <span itemprop="name">上位机</span>
                   </a>
                 </span>
 
@@ -267,8 +269,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/03/13/alphago/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/13/alphago/" itemprop="commentsCount"></span>
+                <a href="/2016/04/26/comm3/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/26/comm3/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -289,26 +291,12 @@
       
 
       
-        <p><img src="http://www.zmgov.com/d/file/sports/zh/2016-03-09/19dca1395297fc315255871571384687.jpg" alt="人机围棋大战"><br>“人机大战”，李世石0：3完败给“阿尔法狗”，哀叹声四起，满世界新闻标题都是“人工智能统治人类”一类的话。<br>说实话，我们该担心人工智能吗？<br>我们当然不用担心，或者说，很长很长的一段时间，我们都不用担心。<br><a id="more"></a></p>
-<h2 id="AlphaGo如何击败李世石的？"><a href="#AlphaGo如何击败李世石的？" class="headerlink" title="AlphaGo如何击败李世石的？"></a>AlphaGo如何击败李世石的？</h2><blockquote>
-<p>AlphaGo使用蒙特卡洛树搜索，借助值网络与策略网络这两种深度神经网络，通过值网络来评估大量选点，并通过策略网络选择落点。AlphaGo最初通过模仿人类玩家，尝试匹配职业棋手的棋局，一旦它达到了一定的熟练程度，它开始和自己对弈大量棋局，使用强化学习进一步改善它。围棋无法仅通过寻找最佳步来解决；游戏一盘平均有150步，每一步平均有200种可选的下法，意味着有太多需要解决的可能性。<br>来源：wiki百科。</p>
-</blockquote>
-<p>AlphaGo在走棋过程中几乎没有失误，屡出奇招，靠的是完美的分析与计算能力，是人类无法达到的，人下棋，会受到情感等各种影响，难免会出现判断失误，人工智能则不会出现这样的情况。依靠算法的力量，给出最优决策，这是人类难以达到的高度。</p>
-<h2 id="AI这么强，我们该不该担心"><a href="#AI这么强，我们该不该担心" class="headerlink" title="AI这么强，我们该不该担心"></a>AI这么强，我们该不该担心</h2><p>首先，这只是围棋而已。<br>虽然说围棋难度极高，但终究是棋类，输入的信息量很小，而且AlphaGo是“经验主义”，依靠大量已有棋局去学习。</p>
-<p>如果让AlphaGo去挑战RTS类游戏，恐怕很长一段时间，AlphaGo都很难战胜人类。</p>
-<blockquote>
-<p>在棋牌麻将中，操作之后就意味着结果，操作就是结果，每一次操作就对应着每一个瞬间的结果。<br>但是，在星际等rts中，操作仅仅是开始，比如你想杀掉某个单位，当你选中自己的一个单位a过去的时候，这个操作已经执行完了，但这个操作想要达到的目的却还没有在那一瞬间实现，目标单位还没死，什么时候死？不知道，会不会死？不知道。<br>作者：卢斌<br>链接：<a href="https://www.zhihu.com/question/41187744/answer/90226474" target="_blank" rel="external">https://www.zhihu.com/question/41187744/answer/90226474</a></p>
-</blockquote>
-<p>原因很简单，RTS游戏中，公平竞争，AI无法在每个时段根据已知信息判断出当前局势。</p>
-<p>在围棋中，AI看得见整个局势，不需要揣摩对手心理就可以下棋。<br>而RTS中，不作弊，只能在看得见的信息中去猜测对方的行动，所以，AI无法评估整个局势，也就无法很难赢得比赛。</p>
-<p>连RTS都无法击败，更不要提统治人类了。</p>
-<h2 id="我们完全没必要担心"><a href="#我们完全没必要担心" class="headerlink" title="我们完全没必要担心"></a>我们完全没必要担心</h2><blockquote>
-<p>下第二盘棋时，李世石紧张得出汗，或许，他真的以为他是在代表人类。其实，真正代表人类的恰恰是阿尔法。它的高水平，意味着人类已把自己的帮手推到了怎样高的水平，这是人类智力的胜利。大家该高兴才对，而李世石只代表他个人。至于有人惶恐，认为将来人工智能将威胁人类，我不知道，这念头是不是好莱坞电影看多了的缘故。再高的智能也是人工的，除了拨掉电源，人类有太多的方法只让它为自己服务而不害自己，因此，有什么可怕的！我相信，人工智能水平再高，也出不来莫扎特贝多芬，慌什么？      —-白岩松<br>来源：<a href="http://tech.qq.com/a/20160313/013975.htm" target="_blank" rel="external">http://tech.qq.com/a/20160313/013975.htm</a></p>
-</blockquote>
-<p>白岩松说的没错，想控制AI，人类有太多办法。</p>
-<p>况且，至今为止，人类都没能让机器人拥有自我意识，没有自我意识，就算能给出再好的决策，也永远无法击败人类。</p>
-<p>就像网上传的那句话：AI没有故意输给人类之前，我们都不用担心。</p>
-<p><strong>文/TomRiddle，转载请注明出处。</strong></p>
+        <p>上次我们讲到如何设置串口，这次我们讲讲如何发送与接收数据。<br>在串口中，上位机接收发送数据是从缓存区中进行的。下位机发送数据，通过串口接收到数据缓存区，然后上位机再从缓存区读取数据;上位机发送数据到缓存区，串口再从缓存区读数据发送到下位机，这个缓存区一般在内存中。</p>
+<p>为了使发送和接收同步进行，我们使用串口类的委托事件来写：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">private void Form1_Load(object sender, EventArgs e)&#10;&#123;&#10;    serialPort1.DataReceived += new SerialDataReceivedEventHandler(Port_DataRecevied);&#10;    //&#25509;&#25910;&#20107;&#20214;&#22996;&#25176;&#10;&#125;&#10;private void Port_DataRecevied(object sender,SerialDataReceivedEventArgs e)&#10;&#123;&#10;    string str = serialPort1.ReadExisting();&#10;    ReceiveArea.AppendText(str); //&#25509;&#25910;&#20107;&#20214;&#10;&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这里读取只用了ReadExisting(),还有其他方法，都已经封装到串口类中了，可以直接参照API手册。<br>发送也很简单，只需要在点击按钮事件中填入接收方法就可以，这里不多论述了。</p>
+<p>总的来说，接收与发送是同步进行的，这里的接收使用了委托事件，让计算机自己开线程进行接收。</p>
+<p>到此为止，我们的串口助手软件就写完成了，当然还可以加入其他的功能，比如从文件读数据发送，当然其它功能都很简单，这里不一一阐述了。</p>
+<p>最后，再发一遍此项目地址：<a href="https://github.com/TomDRiddle/CSharp-SerialPort-Helper" target="_blank" rel="external">https://github.com/TomDRiddle/CSharp-SerialPort-Helper</a><br>欢迎大家指正错误！</p>
 
       
     </div>
@@ -317,7 +305,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/人工智能/" rel="tag">#人工智能</a>
+            <a href="/tags/C/" rel="tag">#C#</a>
           
         </div>
       
@@ -326,17 +314,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/03/07/minecraftserver-md/" rel="next" title="使用阿里云搭建Minecraft服务器">
-                <i class="fa fa-chevron-left"></i> 使用阿里云搭建Minecraft服务器
+              <a href="/2016/04/17/bash-on-win/" rel="next" title="linux on win10 上手体验">
+                <i class="fa fa-chevron-left"></i> linux on win10 上手体验
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/03/27/comm/" rel="prev" title="一步一步写串口--综述">
-                一步一步写串口--综述 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -362,8 +346,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/03/13/alphago/"
-           data-title="我们该担心AlphaGo吗？" data-url="http://yoursite.com/2016/03/13/alphago/">
+      <div class="ds-thread" data-thread-key="2016/04/26/comm3/"
+           data-title="一步一步写串口--发送接收" data-url="http://yoursite.com/2016/04/26/comm3/">
       </div>
     
   </div>
@@ -468,7 +452,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#AlphaGo如何击败李世石的？"><span class="nav-number">1.</span> <span class="nav-text">AlphaGo如何击败李世石的？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AI这么强，我们该不该担心"><span class="nav-number">2.</span> <span class="nav-text">AI这么强，我们该不该担心</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#我们完全没必要担心"><span class="nav-number">3.</span> <span class="nav-text">我们完全没必要担心</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
